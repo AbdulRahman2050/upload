@@ -1,13 +1,96 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .disImg img {
+    width: 250px!important;
+    height: 150px!important;
+  }
+  .ac button{
+    width: 60%!important;
+    margin-left: 0!important;
+  }
+  .ac input[type="text"]{
+    width: 60%!important;
+  }
+}
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.ms {
+  display: flex;
+  height: 300px;
+  margin: 5rem auto;
+  border-radius: 15px;
+}
+
+.ms main {
+  margin: auto;
+}
+
+.formS {
+  height: 250px;
+}
+
+.ac {
+  display: flex;
+  flex-direction: column;
+}
+.ac label {
+  margin: 5px;
+  margin-left: 0;
+}
+
+.ac input[type="file"] {
+  margin: 1.5rem auto;
+}
+.ac input[type="text"] {
+  padding: 5px;
+}
+
+.ac input[type="text"]:focus {
+  border: 2px solid #007bff;
+  box-shadow: 0 5px 15px rgba(5, 5, 5, 0.1);
+  outline: none;
+}
+
+.ac button {
+  color: black;
+  background: transparent;
+  border: 1px solid rgb(2, 32, 32);
+  border-radius: 0.25rem;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  outline: none;
+  width: 100%;
+
+}
+.ac button:hover {
+  background: #4fc3f7;
+  color: aliceblue;
+  border: 1px solid #007bff;
+  transition: 0.5s;
+}
+
+.disImg {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.disImg img {
+  width: 500px;
+  height: 250px;
+  border-radius: 0.25rem;
 }
