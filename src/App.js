@@ -4,7 +4,7 @@ import axios from "axios";
 function App() {
   const [file, setFile] = useState();
   const [description, setDescription] = useState("");
-  const [uploadedFile, setUploadedFile] = useState();
+  const [uploadedFile, setUploadedFile] = useState(false);
   const [filesName, setFileName] = useState("");
 
   const handleChange = (event) => {
@@ -19,9 +19,9 @@ function App() {
 
     try {
       const res = await axios.post("http://localhost:3001/upload", formData);
-      const { fileName, filePath } = res.data;
-      setUploadedFile({ fileName, filePath });
-      console.log(uploadedFile.filePath);
+      // const { fileName, filePath } = res.data;
+      setUploadedFile(true);
+      // console.log(uploadedFile.filePath);
     } catch (err) {
       if (err) {
         console.log(err);
